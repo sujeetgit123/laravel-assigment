@@ -22,7 +22,6 @@ use App\Http\Controllers\AuthController;
 Route::group(['middleware' => 'throttle:100,1'], function() {
   Route::post('register', [AuthController::class, 'register']);
   Route::post('login', [AuthController::class, 'login']);
-  Route::post('test', [AuthController::class, 'me']);
   Route::post('candidates', [AuthController::class, 'createCandidate']);
   Route::get('candidates', [AuthController::class, 'getCandidates']);
   Route::get('candidates/{id}', [AuthController::class, 'getCandidatesBySearch']);

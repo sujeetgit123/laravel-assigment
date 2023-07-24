@@ -146,11 +146,6 @@ class AuthController extends Controller
         $response = setResponseData(['token' => $token], true, false, false, trans('auth.user_created'));
         return response()->json($response, 201);
     }
-
-    public function me()
-    {
-        return response()->json(auth()->user());
-    }
     /**
      * @api {post} candidates Create New candidate
      * @apiName candidates
